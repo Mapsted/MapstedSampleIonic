@@ -1,7 +1,0 @@
-{
-  "name": "mapsted-ionic-wrapper",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
