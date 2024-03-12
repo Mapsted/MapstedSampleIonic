@@ -3,6 +3,20 @@ This project serves as a sample of how to integrate the Mapsted SDK into an proj
 
 The sample Ionic App calls the Mapsted Native SDK for Android and iOS.
 
+## Ionic requirements
+You need to download below things
+
+1. Node.js: https://nodejs.org/en/download/
+2. NPM (Node Package Manager): Included with Node.js installation.
+3. NVM (Node Version Manager): https://github.com/nvm-sh/nvm
+4. Java JDK and JRE: https://www.oracle.com/java/technologies/javase-jdk15-downloads.html
+5. Visual Studio Code: https://code.visualstudio.com/
+6. Ionic CLI and Core (for both Cordova and Capacitor): https://ionicframework.com/docs/cli
+7. Android Studio: https://developer.android.com/studio
+8. Gradle: https://gradle.org/releases/
+9. Xcode -version -15.0: Available through the Mac App Store or https://developer.apple.com/xcode/
+10. CocoaPods: https://cocoapods.org/
+
 ## Setup
 
 Clone the repo, then install the packages using:
@@ -11,7 +25,6 @@ npm install
 ```
 
 Sync files just in case:
-Run the app with ionic cli:
 ```sh
 npx cap sync
 ```
@@ -20,40 +33,58 @@ npx cap sync
 
 * For implementing Mapsted Sdk in Ionic project you need to add some files.
 
-1. Install mapsted plugin
+## Install mapsted plugin
 
-# If you use publish mapsted plugin
-Run - npm install maspted
+1. If you use publish mapsted plugin
+Capacitor plugin - 
+https://www.npmjs.com/package/mapsted
+```sh
+npm install maspted
+```
 
-# If you use git code for plugin code locally
-Run - npm install file:///path to your plugin folder
+or
 
-2. You need to add some permissions for locations in your AndroidManifest.xml,
+2. If you use git code for plugin code locally
+Capacitor plugin Repository - 
+https://github.com/Mapsted/mapsted-ionic-capacitor-plugin
+```sh
+npm install file:///path to your plugin folder
+```
+
+3. You need to add some permissions for locations (GPS) in your AndroidManifest.xml,
 path – your-ionic-project\android\app\src\main\AndroidManifest.xml
 
-3. You need to add licence file in your ionic project platform folder.
+4. You need to add licence file in your ionic project platform folder.
 Path- your-ionic-project\android\app\src\main\assets\demo_android_licence.key
 
-4. You need to implement sdk in build gradle file in android folder.
+5. You need to implement sdk in build gradle file in android folder.
 Path - your-ionic-project\android\build.gradle
 Path - your-ionic-project\android\app\build.gradle
 
 
 # Integrating into Existing Apps (iOS)
 
-1. Install mapsted plugin
+* For implementing Mapsted Sdk in Ionic project you need to add some files.
 
-# If you use publish mapsted plugin
-Run - npm install maspted
+## Install mapsted plugin
 
-# If you use git code for plugin code locally
-Run - npm install file:///path to your plugin folder
+1. If you use publish mapsted plugin
+```sh
+npm install maspted
+```
 
-2. Add licence key.
+or
+
+2. If you use git code for plugin code locally
+```sh
+npm install file:///path to your plugin folder
+```
+
+3. Add licence key.
 Path - your-ionic-project\ios\App\App\Resources\ios_licence.key
 
-3. Add sdk in podfile.
+4. Add sdk in podfile.
 Path- your-ion-project\ios\App\Podfile
 
-4. You need to add some permissions for locations in your Info.plist file.
+5. You need to add some permissions for locations (GPS) in your Info.plist file.
 Path- your-ionic-project\ios\App\App\Info.plist

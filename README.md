@@ -18,7 +18,7 @@ You need to download below things
 9. Xcode -version -15.0: Available through the Mac App Store or https://developer.apple.com/xcode/
 10. CocoaPods: https://cocoapods.org/
 
-## mapsted-sample-capacitor setup
+# mapsted-sample-capacitor setup
 This project serves as a sample of how to integrate the Mapsted SDK into an project Ionic.
 
 The sample Ionic App calls the Mapsted Native SDK for Android and iOS.
@@ -52,6 +52,7 @@ or
 
 2. If you use git code for plugin code locally
 Capacitor plugin Repository - 
+https://github.com/Mapsted/mapsted-ionic-capacitor-plugin
 ```sh
 npm install file:///path to your plugin folder
 ```
@@ -96,45 +97,45 @@ Path- your-ionic-project\ios\App\App\Info.plist
 
 # mapsted-sample-cordova setup
 
-## For Android Platform
+This project serves as a sample of how to integrate the Mapsted SDK into an Ionic cordova project.
 
-1. You need to install both cordova plugin wrapper and awesome plugin in your ionic cordova project 
-Example - 
-2. Create the project
-```sh
-ionic start yourIonicCordovaProject --cordova
-```
+The sample Ionic App calls the Mapsted Native SDK for Android.
 
+## Setup
+
+1. Clone the repo, then install the packages using:
 ```sh
 npm install
 ```
-
-3. Add android platform
+2. Add android platform in your ionic cordova project
 ```sh
 ionic cordova platform add android
 ```
 
-4. Install the plugin using local folder path
+# Integrating into Existing Apps (Android)
+
+1. You need to install both cordova plugin wrapper and awesome plugin in your ionic cordova project.
 Cordova plugin Repository - 
 https://github.com/Mapsted/mapsted-ionic-cordova-plugin/tree/development
 
+2. Install the plugin using local folder path
 ```sh
 ionic cordova plugin add "path to/YourCordovaPLuginFolder"
 ```
 
-5. In your AwesomePluginFolder after git clone install node modules
+3. In your AwesomePluginFolder after git clone install node modules
 ```sh
 npm install
 ```
 
-6. After npm install you have to run below command before install it in your ionic cordova project
+4. After npm install you have to run below command before install it in your ionic cordova project
 ```sh
 npm run build
 ```
 
-7. After you run command "npm run build" you will get dist folder then install then awesome cordova plugin code to your ionic cordova project. 
+5. After you run command "npm run build" you will get dist folder then install then awesome cordova plugin code to your ionic cordova project. 
 
-8 Install awesome cordova plugin
+6. Install awesome cordova plugin
 ```sh
 npm install "path to /AwesomePluginFolder/dist"
 ```
@@ -144,9 +145,11 @@ npm install "path to /AwesomePluginFolder/dist"
 1. You can check the sample cordova project code for how to add the dependencies in this files.
 
 permissions(If it's not there in AndroidManifest.xml file)- 
+```sh
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+```    
     
 
 In build.gradle you can check the sample code for how to add the dependencies in this file(If you are facing build errors or crash). -
