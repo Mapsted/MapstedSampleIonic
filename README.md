@@ -153,9 +153,10 @@ In build.gradle you can check the sample code for how to add the dependencies in
 
 Path for build.gradle -
 yourIonicCordovaProject\platforms\android\app\build.gradle
-
+ <!-- other dependencies -->
+```sh
 android {
-    <!-- other dependencies -->
+   
     packagingOptions {
       exclude 'META-INF/LICENSE.md'
       exclude 'META-INF/NOTICE.md'
@@ -185,6 +186,7 @@ android {
             buildConfig true
         }
 }
+```
 
 Path for Repository-
 yourIonicCordovaProject\platforms\android\app\repositories.gradle
