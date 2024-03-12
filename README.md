@@ -1,6 +1,5 @@
-# How to use this Sample plugin code projects.
-1. In this development branch, there are two folders one is mapsted-sample-capacitor and another one is mapsted-sample-cordova. If you are using it by just downloading or git clone the branch in your local system then follow below steps-
-
+# How to use Sample plugin projects.
+1. In this development branch, there are two folders one is mapsted-sample-capacitor and another one is mapsted-sample-cordova.
 2. Firstly download this both folders separately.
 3. You can use Cordova plugin and Capacitor plugin locally in your Ionic cordova project and Ionic capacitor project.
 
@@ -120,7 +119,7 @@ https://github.com/Mapsted/mapsted-ionic-cordova-plugin/tree/development
 
 2. Install the plugin using local folder path
 ```sh
-ionic cordova plugin add "path to/YourCordovaPLuginFolder"
+ionic cordova plugin add <path to YourCordovaPLuginFolder>
 ```
 
 3. In your AwesomePluginFolder after git clone install node modules
@@ -137,20 +136,21 @@ npm run build
 
 6. Install awesome cordova plugin
 ```sh
-npm install "path to /AwesomePluginFolder/dist"
+npm install <path to /AwesomePluginFolder/dist>
 ```
 
-## You need to add permissions in AndroidManifest and some modifications in build.gradle, styles.xml and repositories.gradle files in ionic cordova project.
+## Add permissions and file setup
+1. You need to add permissions in AndroidManifest and some modifications in build.gradle, styles.xml and repositories.gradle files in ionic cordova project.
 
-1. You can check the sample cordova project code for how to add the dependencies in this files.
-
+2. You can check the sample cordova project code for how to add the dependencies in this files.
+Path for AndroidManifest.xml file- yourIonicCordovaProject\platforms\android\app\src\main\AndroidManifest.xml    
 permissions(If it's not there in AndroidManifest.xml file)- 
+
 ```sh
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```    
-    
 
 In build.gradle you can check the sample code for how to add the dependencies in this file(If you are facing build errors or crash). -
 
@@ -191,7 +191,7 @@ android {
 }
 ```
 
-Path for Repository-
+Path for App Repository-
 yourIonicCordovaProject\platforms\android\app\repositories.gradle
 Example-
 <!-- Add the below lines --> in ext.repos
@@ -217,14 +217,14 @@ after adding style file code add below in AndroidManifest file-
 </activity>
 ```
 
-2. Add licence key file in Cordova project.
+3. Add licence key file in Cordova project.
 Path - 
 yourIonicCordovaProject\platforms\android\app\src\main\assets\demo_android_licence.key
 
-3. Generate android build
+4. Generate android build
 ```sh
 ionic cordova build android
 ```
 
-4. Echo method is just for testing that you are able to access the cordova plugin or not.
+5. Echo method in cordova plugin is just for testing that you are able to access the cordova plugin or not.
 

@@ -1,5 +1,5 @@
 # Ionic Sample App For installing capacitor plugin
-This project serves as a sample of how to integrate the Mapsted SDK into an project Ionic.
+This project serves as a sample of how to integrate the Mapsted SDK into an Ionic Capacitor project.
 
 The sample Ionic App calls the Mapsted Native SDK for Android and iOS.
 
