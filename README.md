@@ -158,37 +158,7 @@ Path for build.gradle -
 yourIonicCordovaProject\platforms\android\app\build.gradle
  <!-- other dependencies -->
 ```sh
-android {
-   
-    packagingOptions {
-      exclude 'META-INF/LICENSE.md'
-      exclude 'META-INF/NOTICE.md'
-      exclude 'META-INF/gradle/incremental.annotation.processors'
-    }
-    dataBinding {
-      enabled = true
-    }
-    other dependencies
-        buildTypes {
-            release {
-                signingConfig signingConfigs.release
-            }
-            create("staging") {
-                multiDexEnabled true
-                debuggable true
-                versionNameSuffix "-staging"
-                signingConfig signingConfigs.getByName("debug")
-            }
-        }
-        packagingOptions {
-            resources.excludes.add("META-INF/gradle/*")
-            resources.excludes.add("META-INF/*")
-        }
-        buildFeatures {
-            dataBinding true
-            buildConfig true
-        }
-}
+apply from: 'src/main/build-extras.gradle'
 ```
 
 Path for App Repository-
@@ -224,6 +194,55 @@ yourIonicCordovaProject\platforms\android\app\src\main\assets\demo_android_licen
 4. Generate android build
 ```sh
 ionic cordova build android
+```
+
+5. Echo method in cordova plugin is just for testing that you are able to access the cordova plugin or not.
+
+
+# Integrating into Existing Apps (IOS)
+
+1. Same as android folder you need to install both cordova plugin wrapper and awesome plugin in your ionic cordova project.
+Cordova plugin Repository - 
+https://github.com/Mapsted/mapsted-ionic-cordova-plugin/tree/development
+
+2. Install the plugin using local folder path
+```sh
+ionic cordova plugin add <path to YourCordovaPLuginFolder>
+```
+
+3. In your AwesomePluginFolder after git clone install node modules
+```sh
+npm install
+```
+
+4. After npm install you have to run below command before install it in your ionic cordova project
+```sh
+npm run build
+```
+
+5. After you run command "npm run build" you will get dist folder then install then awesome cordova plugin code to your ionic cordova project. 
+
+6. Install awesome cordova plugin
+```sh
+npm install <path to /AwesomePluginFolder/dist>
+```
+
+## File setup 
+1. Add ios platform in your ionic cordova project
+```sh
+ionic cordova platform add ios
+```
+
+2. Add IOS licence key file in Cordova project.
+Path - 
+yourIonicCordovaProject\platforms\ios\yourIonicCordovaProject\Resources\ios_licence.key
+3. Add your project name in place of - #import "<#YourProjectName#>-Swift.h"
+Path-
+yourIonicCordovaProject\platforms\ios\yourIonicCordovaProject\Plugins\cordova.plugin.mapsted\CordovaPluginMapsted.m
+
+4. Generate IOS build
+```sh
+ionic cordova build ios
 ```
 
 5. Echo method in cordova plugin is just for testing that you are able to access the cordova plugin or not.
