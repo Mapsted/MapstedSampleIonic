@@ -120,7 +120,7 @@ ionic cordova build android
 
 1. Same as android folder you need to install both cordova plugin wrapper and awesome plugin in your ionic cordova project.
 Cordova plugin Repository - 
-https://github.com/Mapsted/mapsted-ionic-cordova-plugin/tree/feature-ios
+https://github.com/Mapsted/mapsted-ionic-cordova-plugin/tree/development
 
 2. Install the plugin using local folder path
 ```sh
