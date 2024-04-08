@@ -1,0 +1,7 @@
+{
+  "name": "cordovaMapstedProject",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

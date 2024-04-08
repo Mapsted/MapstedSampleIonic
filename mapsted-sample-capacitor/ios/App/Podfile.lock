@@ -1,0 +1,73 @@
+PODS:
+  - Capacitor (5.7.0):
+    - CapacitorCordova
+  - CapacitorCordova (5.7.0)
+  - CapacitorGeolocation (5.0.7):
+    - Capacitor
+  - Mapsted (0.0.1):
+    - Capacitor
+    - mapsted-sdk-map-ui (~> 5.0)
+  - mapsted-sdk-alerts (5.3.11):
+    - mapsted-sdk-triggers-core (= 5.3.11)
+  - mapsted-sdk-core (5.3.11):
+    - SSZipArchive
+  - mapsted-sdk-core-map (4.4.6.2)
+  - mapsted-sdk-loc-marketing (5.3.11):
+    - mapsted-sdk-core (= 5.3.11)
+  - mapsted-sdk-map (5.3.11):
+    - mapsted-sdk-core (= 5.3.11)
+    - mapsted-sdk-core-map (= 4.4.6.2)
+  - mapsted-sdk-map-ui (5.3.11):
+    - mapsted-sdk-alerts (= 5.3.11)
+    - mapsted-sdk-loc-marketing (= 5.3.11)
+    - mapsted-sdk-map (= 5.3.11)
+  - mapsted-sdk-triggers-core (5.3.11):
+    - mapsted-sdk-core (= 5.3.11)
+  - SSZipArchive (2.4.3)
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorGeolocation (from `../../node_modules/@capacitor/geolocation`)"
+  - Mapsted (from `../../../mapsted`)
+  - mapsted-sdk-map-ui (~> 5.0)
+
+SPEC REPOS:
+  https://github.com/Mapsted/podspec-simulator.git:
+    - mapsted-sdk-alerts
+    - mapsted-sdk-core
+    - mapsted-sdk-core-map
+    - mapsted-sdk-loc-marketing
+    - mapsted-sdk-map
+    - mapsted-sdk-map-ui
+    - mapsted-sdk-triggers-core
+  trunk:
+    - SSZipArchive
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorGeolocation:
+    :path: "../../node_modules/@capacitor/geolocation"
+  Mapsted:
+    :path: "../../../mapsted"
+
+SPEC CHECKSUMS:
+  Capacitor: fc155ee2ee45a2093d716f13cf5aa5a865e2d85a
+  CapacitorCordova: e825fce1a2e14e4b5730641c7e098dccf74397b7
+  CapacitorGeolocation: 918a292459542bcce98433f9e7c7909f8c72838a
+  Mapsted: 5426186699336ddb50429e4051e815db8eb8f682
+  mapsted-sdk-alerts: 5a707b6b8655ed893faabd652ec3ba7e6d5d4de3
+  mapsted-sdk-core: d7bb651e65c554b6b161851988e482a1c1580107
+  mapsted-sdk-core-map: 3b1a6cc029381236023ed8e35268206ee9559b1f
+  mapsted-sdk-loc-marketing: 3d64bdbfe97d06f0af42d202bd274979349ebcad
+  mapsted-sdk-map: 59da38ed2d2361906dcef93a0ef91363d1d301fa
+  mapsted-sdk-map-ui: c7a74c5a5d367123f20d11d04c152c9160c7447b
+  mapsted-sdk-triggers-core: f010d544f669ab8f0199f01bde6af24376e453e8
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
+
+PODFILE CHECKSUM: 3ba52dacf96e9875154f303a12beb3906422a217
+
+COCOAPODS: 1.15.2
