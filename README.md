@@ -196,9 +196,6 @@ yourIonicCordovaProject\platforms\android\app\src\main\assets\demo_android_licen
 ionic cordova build android
 ```
 
-5. Echo method in cordova plugin is just for testing that you are able to access the cordova plugin or not.
-
-
 # Integrating into Existing Apps (IOS)
 
 1. Same as android folder you need to install both cordova plugin wrapper and awesome plugin in your ionic cordova project.
@@ -245,5 +242,4 @@ yourIonicCordovaProject\platforms\ios\yourIonicCordovaProject\Plugins\cordova.pl
 ionic cordova build ios
 ```
 
-5. Echo method in cordova plugin is just for testing that you are able to access the cordova plugin or not.
 
