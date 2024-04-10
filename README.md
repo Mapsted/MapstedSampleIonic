@@ -233,11 +233,8 @@ ionic cordova platform add ios
 2. Add IOS licence key file in Cordova project.
 Path - 
 yourIonicCordovaProject\platforms\ios\yourIonicCordovaProject\Resources\ios_licence.key
-3. Add your project name in place of - #import "<#YourProjectName#>-Swift.h"
-Path-
-yourIonicCordovaProject\platforms\ios\yourIonicCordovaProject\Plugins\cordova.plugin.mapsted\CordovaPluginMapsted.m
 
-4. Generate IOS build
+3. Generate IOS build
 ```sh
 ionic cordova build ios
 ```
