@@ -196,9 +196,6 @@ yourIonicCordovaProject\platforms\android\app\src\main\assets\demo_android_licen
 ionic cordova build android
 ```
 
-5. Echo method in cordova plugin is just for testing that you are able to access the cordova plugin or not.
-
-
 # Integrating into Existing Apps (IOS)
 
 1. Same as android folder you need to install both cordova plugin wrapper and awesome plugin in your ionic cordova project.
@@ -236,14 +233,10 @@ ionic cordova platform add ios
 2. Add IOS licence key file in Cordova project.
 Path - 
 yourIonicCordovaProject\platforms\ios\yourIonicCordovaProject\Resources\ios_licence.key
-3. Add your project name in place of - #import "<#YourProjectName#>-Swift.h"
-Path-
-yourIonicCordovaProject\platforms\ios\yourIonicCordovaProject\Plugins\cordova.plugin.mapsted\CordovaPluginMapsted.m
 
-4. Generate IOS build
+3. Generate IOS build
 ```sh
 ionic cordova build ios
 ```
 
-5. Echo method in cordova plugin is just for testing that you are able to access the cordova plugin or not.
 

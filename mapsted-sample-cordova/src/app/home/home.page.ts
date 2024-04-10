@@ -9,7 +9,6 @@ import { AwesomeCordovaPluginMapsted } from 'awesome-cordova-plugins-example/ngx
 
 export class HomePage implements OnInit{
 
-  echoVal!: string;
   constructor(private mapsted: AwesomeCordovaPluginMapsted) {}
 
   ngOnInit(): void {
@@ -26,17 +25,6 @@ export class HomePage implements OnInit{
     }
   }
 
-  echo() {
-    this.mapsted.echo("Hello Echo").then(
-      (result: string) => {
-        console.log(result);
-        this.echoVal = result;
-      },
-      (error: any) => {
-        console.error(error);
-      }
-    );
-  }
 }
 
 
