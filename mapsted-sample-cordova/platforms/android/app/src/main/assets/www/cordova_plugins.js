@@ -9,6 +9,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
+      "id": "cordova-plugin-firebase-crash.FirebaseCrash",
+      "file": "plugins/cordova-plugin-firebase-crash/www/FirebaseCrash.js",
+      "pluginId": "cordova-plugin-firebase-crash",
+      "merges": [
+        "cordova.plugins.firebase.crashlytics"
+      ]
+    },
+    {
       "id": "cordova-plugin-ionic-keyboard.keyboard",
       "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
       "pluginId": "cordova-plugin-ionic-keyboard",
@@ -51,10 +59,12 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
   ];
   module.exports.metadata = {
     "cordova-plugin-device": "2.0.2",
+    "cordova-support-android-plugin": "2.0.4",
+    "cordova-plugin-firebase-crash": "8.0.2",
     "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-ionic-webview": "5.0.0",
     "cordova-plugin-splashscreen": "5.0.2",
-    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-statusbar": "2.4.3",
     "cordova.plugin.mapsted": "1.0"
   };
 });

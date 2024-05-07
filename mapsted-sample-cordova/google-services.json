@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "918152133836",
+    "project_id": "mapsted-crashlytics",
+    "storage_bucket": "mapsted-crashlytics.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918152133836:android:dac0c70afa861826ab5669",
+        "android_client_info": {
+          "package_name": "com.mapsted.sampleionic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVQJ4n8XAUnB58G-3E7UR7BM8CS_W-z0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918152133836:android:4df74e146c48e5afab5669",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVQJ4n8XAUnB58G-3E7UR7BM8CS_W-z0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

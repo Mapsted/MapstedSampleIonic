@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AwesomeCordovaPluginMapsted } from 'awesome-cordova-plugins-example/ngx';
+// import { FirebaseCrash } from '@awesome-cordova-plugins/firebase-crash/ngx';
 
 @Component({
   selector: 'app-home',
@@ -26,17 +27,21 @@ export class HomePage implements OnInit{
     }
   }
 
-  echo() {
-    this.mapsted.echo("Hello Echo").then(
-      (result: string) => {
-        console.log(result);
-        this.echoVal = result;
-      },
-      (error: any) => {
-        console.error(error);
-      }
-    );
-  }
+  // echo() {
+  //   this.mapsted.echo("Hello Echo").then(
+  //     (result: string) => {
+  //       console.log(result);
+  //       this.echoVal = result;
+  //     },
+  //     (error: any) => {
+  //       console.error(error);
+  //     }
+  //   );
+  // }
+
+  // testCrash() {
+  //   this.firebaseCrash.logError("This is a test crash");
+  // }
 }
 
 

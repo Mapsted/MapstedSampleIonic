@@ -16,6 +16,9 @@ MIT
 @awesome-cordova-plugins/core
 MIT
 
+@awesome-cordova-plugins/firebase-crash
+MIT
+
 @babel/runtime
 MIT
 MIT License

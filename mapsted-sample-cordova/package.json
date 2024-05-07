@@ -21,9 +21,10 @@
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
     "@angular/router": "^17.0.2",
+    "@awesome-cordova-plugins/firebase-crash": "^6.6.0",
     "@ionic/angular": "^7.0.0",
     "@ionic/cordova-builders": "^11.0.0",
-    "awesome-cordova-plugins-example": "file:../awesome-cordova-plugin-map/dist",
+    "awesome-cordova-plugins-example": "file:../../MS-ionic-cordova-plugin-CA/awesome-cordova-plugin/dist",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -44,12 +45,15 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "cordova-android": "^12.0.1",
+    "cordova-ios": "^7.1.0",
     "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-firebase-crash": "^8.0.2",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^5.0.0",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
-    "cordovapluginmapsted": "file:../CordovaPluginMap",
+    "cordova-support-android-plugin": "~2.0.4",
+    "cordovapluginmapsted": "file:../../MS-ionic-cordova-plugin-CA/mapsted-cordova-plugin",
     "eslint": "^7.26.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
@@ -71,9 +75,14 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova.plugin.mapsted": {}
+      "cordova.plugin.mapsted": {},
+      "cordova-plugin-firebase-crash": {
+        "CRASHLYTICS_COLLECTION_ENABLED": "true",
+        "ANDROID_FIREBASE_BOM_VERSION": "32.5.0"
+      }
     },
     "platforms": [
+      "ios",
       "android"
     ]
   }

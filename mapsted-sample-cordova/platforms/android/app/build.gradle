@@ -18,6 +18,7 @@
 */
 
 apply plugin: 'com.android.application'
+apply from: 'src/main/build-extras.gradle'
 
 if (cordovaConfig.IS_GRADLE_PLUGIN_KOTLIN_ENABLED) {
     apply plugin: 'kotlin-android'
@@ -109,6 +110,7 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "../cordova-plugin-firebase-crash/sampleionic-build.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()
@@ -198,14 +200,6 @@ android {
     }
 
     buildToolsVersion cordovaConfig.BUILD_TOOLS_VERSION
-    packagingOptions {
-      exclude 'META-INF/LICENSE.md'
-      exclude 'META-INF/NOTICE.md'
-      exclude 'META-INF/gradle/incremental.annotation.processors'
-    }
-    dataBinding {
-      enabled = true
-    }
 
     // This code exists for Crosswalk and other Native APIs.
     // By default, we multiply the existing version code in the
@@ -274,20 +268,6 @@ android {
             release {
                 signingConfig signingConfigs.release
             }
-            create("staging") {
-                multiDexEnabled true
-                debuggable true
-                versionNameSuffix "-staging"
-                signingConfig signingConfigs.getByName("debug")
-            }
-        }
-        packagingOptions {
-            resources.excludes.add("META-INF/gradle/*")
-            resources.excludes.add("META-INF/*")
-        }
-        buildFeatures {
-            dataBinding true
-            buildConfig true
         }
         addSigningProps(cdvReleaseSigningPropertiesFile, signingConfigs.release)
     }
@@ -319,9 +299,11 @@ dependencies {
 
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
-    implementation "com.mapsted:sdk-map-ui:5.4.7"
-    implementation "com.mapsted:sdk-map:5.4.7"
-    implementation "com.mapsted:sdk-core:5.4.7"
+    implementation platform("com.google.firebase:firebase-bom:32.5.0")
+    implementation "com.google.firebase:firebase-crashlytics"
+    implementation "com.mapsted:sdk-map-ui:5.4.28-rc-1"
+    implementation "com.mapsted:sdk-map:5.4.28-rc-1"
+    implementation "com.mapsted:sdk-core:5.4.28-rc-1"
     // SUB-PROJECT DEPENDENCIES END
 }
 

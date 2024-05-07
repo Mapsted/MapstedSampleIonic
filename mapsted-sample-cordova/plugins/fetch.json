@@ -2,7 +2,7 @@
   "cordova.plugin.mapsted": {
     "source": {
       "type": "local",
-      "path": "D:\\mapsted-workspace\\cordova-plugin-project-folders\\cordovaMapstedProject\\node_modules\\cordovapluginmapsted"
+      "path": "/Users/jd/Documents/GitHub/MS-SampleIonic-CA/mapsted-sample-cordova/node_modules/cordovapluginmapsted"
     },
     "is_top_level": true,
     "variables": {}
@@ -10,7 +10,7 @@
   "cordova-plugin-statusbar": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-statusbar@2.4.2"
+      "id": "cordova-plugin-statusbar@^2.4.2"
     },
     "is_top_level": true,
     "variables": {}
@@ -45,6 +45,25 @@
       "id": "cordova-plugin-ionic-keyboard@^2.0.5"
     },
     "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-firebase-crash": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-firebase-crash@^8.0.2"
+    },
+    "is_top_level": true,
+    "variables": {
+      "CRASHLYTICS_COLLECTION_ENABLED": "true",
+      "ANDROID_FIREBASE_BOM_VERSION": "32.5.0"
+    }
+  },
+  "cordova-support-android-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-support-android-plugin@~2.0.4"
+    },
+    "is_top_level": false,
     "variables": {}
   }
 }

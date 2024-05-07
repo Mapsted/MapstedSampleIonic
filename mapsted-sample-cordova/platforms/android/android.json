@@ -32,6 +32,10 @@
               "count": 1
             },
             {
+              "xml": "<feature name=\"FirebaseCrash\"><param name=\"android-package\" value=\"by.chemerisuk.cordova.firebase.FirebaseCrashPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
               "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
@@ -49,6 +53,18 @@
       "config.xml": {
         "parents": {
           "/*": [
+            {
+              "xml": "<preference name=\"AndroidXEnabled\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"GradlePluginGoogleServicesEnabled\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"GradlePluginGoogleServicesVersion\" value=\"4.4.0\" />",
+              "count": 1
+            },
             {
               "xml": "<feature name=\"CDVIonicKeyboard\"><param name=\"android-package\" onload=\"true\" value=\"io.ionic.keyboard.CDVIonicKeyboard\" /></feature>",
               "count": 1
@@ -80,11 +96,27 @@
         "parents": {
           "/*": [
             {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
+            },
+            {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
               "count": 1
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+              "count": 1
+            }
+          ],
+          "/manifest/application": [
+            {
+              "xml": "<meta-data android:name=\"firebase_crashlytics_collection_enabled\" android:value=\"true\" />",
+              "count": 1
+            }
+          ],
+          "application": [
+            {
+              "xml": "<activity android:name=\"com.mapsted.ui.map.MapstedMapActivity\" android:theme=\"@style/AppTheme\" />",
               "count": 1
             }
           ]
@@ -94,22 +126,30 @@
   },
   "installed_plugins": {
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.mapsted.sampleionic"
+    },
+    "cordova-support-android-plugin": {
+      "PACKAGE_NAME": "com.mapsted.sampleionic"
+    },
+    "cordova-plugin-firebase-crash": {
+      "CRASHLYTICS_COLLECTION_ENABLED": "true",
+      "ANDROID_FIREBASE_BOM_VERSION": "32.5.0",
+      "PACKAGE_NAME": "com.mapsted.sampleionic"
     },
     "cordova-plugin-ionic-keyboard": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.mapsted.sampleionic"
     },
     "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.mapsted.sampleionic"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.mapsted.sampleionic"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.mapsted.sampleionic"
     },
     "cordova.plugin.mapsted": {
-      "PACKAGE_NAME": "io.ionic.starter"
+      "PACKAGE_NAME": "com.mapsted.sampleionic"
     }
   },
   "dependent_plugins": {},
@@ -120,6 +160,14 @@
       "pluginId": "cordova-plugin-device",
       "clobbers": [
         "device"
+      ]
+    },
+    {
+      "id": "cordova-plugin-firebase-crash.FirebaseCrash",
+      "file": "plugins/cordova-plugin-firebase-crash/www/FirebaseCrash.js",
+      "pluginId": "cordova-plugin-firebase-crash",
+      "merges": [
+        "cordova.plugins.firebase.crashlytics"
       ]
     },
     {
@@ -165,10 +213,12 @@
   ],
   "plugin_metadata": {
     "cordova-plugin-device": "2.0.2",
+    "cordova-support-android-plugin": "2.0.4",
+    "cordova-plugin-firebase-crash": "8.0.2",
     "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-ionic-webview": "5.0.0",
     "cordova-plugin-splashscreen": "5.0.2",
-    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-statusbar": "2.4.3",
     "cordova.plugin.mapsted": "1.0"
   }
 }

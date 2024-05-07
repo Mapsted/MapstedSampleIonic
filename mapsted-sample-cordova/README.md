@@ -24,41 +24,35 @@ You need to download below things
 ```sh
 npm install
 ```
-2. Add android platform in your ionic cordova project
-```sh
-ionic cordova platform add android
-```
 
-# Integrating into Existing Apps (Android)
-
-1. You need to install both cordova plugin wrapper and awesome plugin in your ionic cordova project.
+2. You need to install both cordova plugin wrapper and awesome plugin in your ionic cordova project.
 Cordova plugin Repository - 
 https://github.com/Mapsted/mapsted-ionic-cordova-plugin/tree/development
 
-2. Install the plugin using local folder path
+3. Install the plugin using local folder path
 ```sh
 ionic cordova plugin add <path to YourCordovaPLuginFolder>
 ```
 
-3. In your AwesomePluginFolder after git clone install node modules
-```sh
-npm install
-```
-
-4. After npm install you have to run below command before install it in your ionic cordova project
-```sh
-npm run build
-```
-
-5. After you run command "npm run build" you will get dist folder then install then awesome cordova plugin code to your ionic cordova project. 
-
-6. Install awesome cordova plugin
+4. Install awesome cordova plugin
 ```sh
 npm install <path to /AwesomePluginFolder/dist>
 ```
 
+# Integrating into Existing Apps (Android)
+
+## Set minimum compile sdk version target in your project `config.xml` file
+```sh
+<preference name="android-compileSdkVersion" value="34" />
+```
+
+1. Add android platform in your ionic cordova project
+```sh
+ionic cordova platform add android
+```
+
 ## Add permissions and file setup 
-1.You need to add permissions in AndroidManifest and some modifications in build.gradle, styles.xml and repositories.gradle files in ionic cordova project.
+1. You need to add permissions in AndroidManifest and some modifications in build.gradle, styles.xml and repositories.gradle files in ionic cordova project.
 
 2. You can check the sample cordova project code for how to add the dependencies in this files.
 Path for AndroidManifest.xml file- yourIonicCordovaProject\platforms\android\app\src\main\AndroidManifest.xml    
@@ -98,6 +92,7 @@ Example -
 ```
 
 after adding style file code add below in AndroidManifest file-
+(If it's not there in AndroidManifest.xml file)
 ```sh
 <activity
     android:name="com.mapsted.ui.map.MapstedMapActivity"
@@ -118,49 +113,27 @@ ionic cordova build android
 
 # Integrating into Existing Apps (IOS)
 
-1. Same as android folder you need to install both cordova plugin wrapper and awesome plugin in your ionic cordova project.
-Cordova plugin Repository - 
-https://github.com/Mapsted/mapsted-ionic-cordova-plugin/tree/development
-
-2. Install the plugin using local folder path
-```sh
-ionic cordova plugin add <path to YourCordovaPLuginFolder>
-```
-
-3. In your AwesomePluginFolder after git clone install node modules
-```sh
-npm install
-```
-
-4. After npm install you have to run below command before install it in your ionic cordova project
-```sh
-npm run build
-```
-
-5. After you run command "npm run build" you will get dist folder then install then awesome cordova plugin code to your ionic cordova project. 
-
-6. Install awesome cordova plugin
-```sh
-npm install <path to /AwesomePluginFolder/dist>
-```
-
 ## File setup 
 1. Add ios platform in your ionic cordova project
 ```sh
 ionic cordova platform add ios
 ```
 
+3. Add source file in Podfile
+```sh
+# To run in simulator add below source target
+source 'https://github.com/Mapsted/podspec-simulator.git'
+
+# To run in device add below source target
+source 'https://github.com/Mapsted/podspec.git'
+```
+
 2. Add IOS licence key file in Cordova project.
 Path - 
 yourIonicCordovaProject\platforms\ios\yourIonicCordovaProject\Resources\ios_licence.key
-3. Add your project name in place of - #import "<#YourProjectName#>-Swift.h"
-Path-
-yourIonicCordovaProject\platforms\ios\yourIonicCordovaProject\Plugins\cordova.plugin.mapsted\CordovaPluginMapsted.m
 
-4. Generate IOS build
+3. Generate IOS build
 ```sh
 ionic cordova build ios
 ```
-
-5. Echo method in cordova plugin is just for testing that you are able to access the cordova plugin or not.
 
