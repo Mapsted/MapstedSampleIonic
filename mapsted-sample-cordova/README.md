@@ -27,7 +27,7 @@ npm install
 
 2. You need to install both cordova plugin wrapper and awesome plugin in your ionic cordova project.
 Cordova plugin Repository - 
-https://github.com/Mapsted/mapsted-ionic-cordova-plugin/tree/development
+https://github.com/Mapsted/mapsted-ionic-cordova-plugin/tree/master
 
 3. Install the plugin using local folder path
 ```sh
