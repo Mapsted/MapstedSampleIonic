@@ -24,8 +24,8 @@
     "@awesome-cordova-plugins/firebase-crash": "^6.6.0",
     "@ionic/angular": "^7.0.0",
     "@ionic/cordova-builders": "^11.0.0",
-    "awesome-cordova-plugins-example": "file:../../MS-ionic-cordova-plugin-CA/awesome-cordova-plugin/dist",
     "ionicons": "^7.0.0",
+    "mapsted-awesome-cordova-plugin": "^0.0.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
@@ -53,7 +53,6 @@
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-support-android-plugin": "~2.0.4",
-    "cordovapluginmapsted": "file:../../MS-ionic-cordova-plugin-CA/mapsted-cordova-plugin",
     "eslint": "^7.26.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
@@ -65,6 +64,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "mapsted-cordova-plugin": "^0.0.3",
     "typescript": "~5.2.2"
   },
   "description": "An Ionic project",
@@ -75,11 +75,11 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova.plugin.mapsted": {},
       "cordova-plugin-firebase-crash": {
         "CRASHLYTICS_COLLECTION_ENABLED": "true",
         "ANDROID_FIREBASE_BOM_VERSION": "32.5.0"
-      }
+      },
+      "mapsted-cordova-plugin": {}
     },
     "platforms": [
       "ios",

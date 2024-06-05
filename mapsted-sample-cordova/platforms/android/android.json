@@ -44,7 +44,7 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"CordovaPluginMapsted\"><param name=\"android-package\" value=\"cordova.plugin.mapsted.CordovaPluginMapsted\" /></feature>",
+              "xml": "<feature name=\"MapstedCordovaPlugin\"><param name=\"android-package\" value=\"mapsted.cordova.plugin.MapstedCordovaPlugin\" /></feature>",
               "count": 1
             }
           ]
@@ -148,7 +148,7 @@
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.mapsted.sampleionic"
     },
-    "cordova.plugin.mapsted": {
+    "mapsted-cordova-plugin": {
       "PACKAGE_NAME": "com.mapsted.sampleionic"
     }
   },
@@ -203,11 +203,11 @@
       ]
     },
     {
-      "id": "cordova.plugin.mapsted.CordovaPluginMapsted",
-      "file": "plugins/cordova.plugin.mapsted/www/CordovaPluginMapsted.js",
-      "pluginId": "cordova.plugin.mapsted",
+      "id": "mapsted-cordova-plugin.MapstedCordovaPlugin",
+      "file": "plugins/mapsted-cordova-plugin/www/MapstedCordovaPlugin.js",
+      "pluginId": "mapsted-cordova-plugin",
       "clobbers": [
-        "CordovaPluginMapsted"
+        "MapstedCordovaPlugin"
       ]
     }
   ],
@@ -219,6 +219,6 @@
     "cordova-plugin-ionic-webview": "5.0.0",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "2.4.3",
-    "cordova.plugin.mapsted": "1.0"
+    "mapsted-cordova-plugin": "1.0"
   }
 }

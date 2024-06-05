@@ -49,11 +49,11 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova.plugin.mapsted.CordovaPluginMapsted",
-      "file": "plugins/cordova.plugin.mapsted/www/CordovaPluginMapsted.js",
-      "pluginId": "cordova.plugin.mapsted",
+      "id": "mapsted-cordova-plugin.MapstedCordovaPlugin",
+      "file": "plugins/mapsted-cordova-plugin/www/MapstedCordovaPlugin.js",
+      "pluginId": "mapsted-cordova-plugin",
       "clobbers": [
-        "CordovaPluginMapsted"
+        "MapstedCordovaPlugin"
       ]
     }
   ];
@@ -65,6 +65,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-ionic-webview": "5.0.0",
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-statusbar": "2.4.3",
-    "cordova.plugin.mapsted": "1.0"
+    "mapsted-cordova-plugin": "1.0"
   };
 });

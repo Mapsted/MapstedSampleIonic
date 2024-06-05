@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AwesomeCordovaPluginMapsted } from 'awesome-cordova-plugins-example/ngx';
+import { MapstedAwesomeCordovaPlugin } from 'mapsted-awesome-cordova-plugin/ngx';
 // import { FirebaseCrash } from '@awesome-cordova-plugins/firebase-crash/ngx';
 
 @Component({
@@ -11,7 +11,7 @@ import { AwesomeCordovaPluginMapsted } from 'awesome-cordova-plugins-example/ngx
 export class HomePage implements OnInit{
 
   echoVal!: string;
-  constructor(private mapsted: AwesomeCordovaPluginMapsted) {}
+  constructor(private mapsted: MapstedAwesomeCordovaPlugin) {}
 
   ngOnInit(): void {
     console.log('ngOnInit');

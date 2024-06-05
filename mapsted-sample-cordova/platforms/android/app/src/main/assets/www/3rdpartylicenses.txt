@@ -77,9 +77,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @ionic/core/components
 
-awesome-cordova-plugins-example
-
 ionic-loader
+
+mapsted-awesome-cordova-plugin
 
 rxjs
 Apache-2.0

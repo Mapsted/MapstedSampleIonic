@@ -18,7 +18,6 @@
 */
 
 apply plugin: 'com.android.application'
-apply from: 'src/main/build-extras.gradle'
 
 if (cordovaConfig.IS_GRADLE_PLUGIN_KOTLIN_ENABLED) {
     apply plugin: 'kotlin-android'
@@ -301,9 +300,9 @@ dependencies {
     implementation(project(path: ":CordovaLib"))
     implementation platform("com.google.firebase:firebase-bom:32.5.0")
     implementation "com.google.firebase:firebase-crashlytics"
-    implementation "com.mapsted:sdk-map-ui:5.4.28"
-    implementation "com.mapsted:sdk-map:5.4.28"
-    implementation "com.mapsted:sdk-core:5.4.28"
+    implementation "com.mapsted:sdk-map-ui:5.4.30"
+    implementation "com.mapsted:sdk-map:5.4.30"
+    implementation "com.mapsted:sdk-core:5.4.30"
     // SUB-PROJECT DEPENDENCIES END
 }
 

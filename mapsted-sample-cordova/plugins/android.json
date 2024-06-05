@@ -27,7 +27,7 @@
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.mapsted.sampleionic"
     },
-    "cordova.plugin.mapsted": {
+    "mapsted-cordova-plugin": {
       "PACKAGE_NAME": "com.mapsted.sampleionic"
     }
   },
